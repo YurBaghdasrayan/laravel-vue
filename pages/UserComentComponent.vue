@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import router from "../router";
 
 export default {
   name: "UserCommentComponent",
@@ -14,11 +15,13 @@ export default {
     this.fetchData();
   },
   methods: {
+    router() {
+      return router
+    },
     fetchData() {
-
+      // console.log(this.$route.params.id)
       let token = localStorage.getItem('token')
-
-      axios.get('http://127.0.0.1:8000/api/comment', {
+      axios.get(`http://127.0.0.1:8000/api/comment/${this.$route.params.id}`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
@@ -38,7 +41,7 @@ export default {
 </script>
 
 <template>
-  <h1>Comments for Post {{ asd.id }}</h1>
+  <h1>Comments for P</h1>
 
   <table class="table">
     <thead class="thead-dark">

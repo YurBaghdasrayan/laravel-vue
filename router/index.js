@@ -38,7 +38,7 @@ const routes = [
     },
 
     {
-        path: '/post-comments',
+        path: '/post-comments/:id',
         name: 'post-comments',
         component: PostComment
     },
