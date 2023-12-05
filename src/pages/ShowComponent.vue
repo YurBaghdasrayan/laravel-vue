@@ -202,19 +202,21 @@ export default {
   <div>
     <div class="flex h-[50px] bg-[#EFEFEF]">
       <div class="flex items-center justify-between mx-auto w-[447px]">
-        <p class="font-roboto">Доставка</p>
+        <p class="font-roboto  ">Доставка</p>
         <p>Оплата</p>
         <p>Отзывы</p>
         <p>Вопрос - ответ</p>
         <p>Контакты</p>
       </div>
     </div>
-    <div class="h-[120px]">
-      <div class=" mx-auto flex items-center h-[80px] w-[1110px]">
-        <img class="" src="../../src/assets/logo1.png" alt="">
-        <img class="" src="../../src/assets/BEAUTY.png" alt="">
+    <div class=" flex items-center h-[120px]">
+      <div class=" mx-auto flex justify-between items-center h-[80px] w-[1110px]">
+        <div class="flex items-center">
+          <img class="" src="../../src/assets/logo1.png" alt="">
+          <img class="h-full ml-[30px]" src="../../src/assets/BEAUTY.png" alt="">
+        </div>
         <div class="flex ">
-          <p class="flex text-[16px] items-center justify-center" >
+          <p class="flex text-[16px] mr-[30px] items-center justify-center">
             8 (812) 123-45-67
           </p>
           <p class="border-[#66C05D] flex items-center justify-center h-[40px] w-[140px] text-[14px] border-2 rounded-3xl	">
@@ -222,6 +224,123 @@ export default {
           </p>
         </div>
       </div>
+    </div>
+    <div class="h-[79px] border-t-2 flex items-center justify-between mx-auto">
+      <div class="flex items-center justify-between mx-auto w-[675px]">
+        <p>Парикмахерская</p>
+        <p>Барбершоп</p>
+        <p>Маникюр</p>
+        <p>Педикюр</p>
+        <p>Массаж</p>
+        <p>Мебель</p>
+      </div>
+    </div>
+    <div  class="  bg-cover bg-center h-[640px]">
+      <div class="  relative top-[192px] w-[308px] ml-[355px] h-[219px]">
+        <p class="mb-[50px] text-[#FFF] text-[48px] font-700">Супер кресло</p>
+        <p class=" text-[14px] text-[#FFF] font-400 ">Текст акции всегда отражает суть, а не просто</p>
+        <p class=" mb-[50px] text-[14px] text-[#FFF] font-400 text-start">болтовню, поэтому внимательнее</p>
+        <p class="border-[#FFF] text-[#FFF] flex items-center justify-center h-[40px] w-[140px] text-[14px] border-2 rounded-3xl	">
+          Подробнее
+        </p>
+      </div>
+    </div>
+    <div class="h-[28px]">
+
+    </div>
+    <div class="bg-[#EFEFEF] h-[954px] relative top-[5px]">
+      <div class="flex mx-auto relative top-[40px] w-[1135px] justify-between">
+        <p class=" right-[415px] top-[45px] text-[#000] justify-center text-[24px] font-700">Специальные предложения</p>
+        <img src="../../src/assets/x368.png" alt="">
+      </div>
+      <div>
+
+      </div>
+      <div class="mx-auto flex justify-between items-center w-[1135px]">
+        <div class=" bg-[#FFF] relative top-[55px] w-[255px] h-[363px]">
+          <img class=" relative top-[25px] mx-auto" src="../../src/assets/Rectangle5.png" alt="">
+          <div class=" bg-[#FFF]  relative top-[42px]">
+            <p class="text-[14px] font-400">Парикмахерское кресло </p>
+            <p class="text-[14px] font-400">«Норм» гидравлическое</p>
+            <p class="text-[21px] font-Roboto font-500 relative top-[13px]">«9 900 ₽ </p>
+            <p class="relative top-[23px] left-[57px] bg-[#66C05D] flex items-center justify-center h-[40px] w-[140px] text-[#FFF] text-[14px] border- rounded-3xl	">
+              Купить
+            </p>
+          </div>
+        </div>
+        <div class=" bg-[#FFF] relative top-[55px] w-[255px] h-[363px]">
+          <img class=" relative top-[25px] mx-auto" src="../../src/assets/Rectangle5.png" alt="">
+          <div class=" bg-[#FFF]  relative top-[42px]">
+            <p class="text-[14px] font-400">Парикмахерское кресло </p>
+            <p class="text-[14px] font-400">«Норм» гидравлическое</p>
+            <p class="text-[21px] font-Roboto font-500 relative top-[13px]">«9 900 ₽ </p>
+            <p class="relative top-[23px] left-[57px] bg-[#66C05D] flex items-center justify-center h-[40px] w-[140px] text-[#FFF] text-[14px] border- rounded-3xl	">
+              Купить
+            </p>
+          </div>
+        </div>
+
+        <div class=" bg-[#FFF] relative top-[55px] w-[255px] h-[363px]">
+          <img class="relative top-[25px] mx-auto" src="../../src/assets/Rectangle5.png" alt="">
+          <div class=" bg-[#FFF]  relative top-[42px]">
+            <p class="text-[14px] font-400">Парикмахерское кресло </p>
+            <p class="text-[14px] font-400">«Норм» гидравлическое</p>
+            <p class="text-[21px] font-Roboto font-500 relative top-[13px]">«9 900 ₽ </p>
+            <p class="relative top-[23px] left-[57px] bg-[#66C05D] flex items-center justify-center h-[40px] w-[140px] text-[#FFF] text-[14px] border- rounded-3xl	">
+              Купить
+            </p>
+          </div>
+        </div>
+
+        <div class=" bg-[#FFF] relative top-[55px] w-[255px] h-[363px]">
+          <img class="relative top-[25px] mx-auto" src="../../src/assets/Rectangle5.png" alt="">
+          <div class=" bg-[#FFF]  relative top-[42px]">
+            <p class="text-[14px] font-400">Парикмахерское кресло </p>
+            <p class="text-[14px] font-400">«Норм» гидравлическое</p>
+            <p class="text-[21px] font-Roboto font-500 relative top-[13px]">«9 900 ₽ </p>
+            <p class="relative top-[23px] left-[57px] bg-[#66C05D] flex items-center justify-center h-[40px] w-[140px] text-[#FFF] text-[14px] border- rounded-3xl	">
+              Купить
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex w-[1135px] mx-auto">
+        <div class=" relative top-[180px] w-[1135px] mx-auto">
+          <div class=" bg-[#66C05D] w-[546px] h-[213px]">
+            <div class="relative left-[37px] text-[#FFF] top-[23px]">
+              <p class="text-[18px] font-bold text-start">Получайте бонусы и </p>
+              <p class="text-[18px] font-bold text-start">подарки</p>
+            </div>
+            <div class="relative left-[37px] text-[#FFF] top-[30px]">
+              <p class="text-[#FFF] text-[14px] text-start" >Каждый месяц разыгрываем </p>
+              <p class="text-[#FFF] text-[14px] text-start"> 10 000 рублей для наших клиентов</p>
+            </div>
+            <div class="relative right-[125px] text-[#FFF] top-[50px]" >
+              <input class="h-[35px] w-[225px] border- rounded-3xl text-center" placeholder="Введите e-mail" type="text">
+            </div>
+            <img class=" relative left-[350px] text-[#FFF] bottom-[90px]" src="../../src/assets/envelope.png" alt="">
+          </div>
+        </div>
+        <div class=" relative top-[180px] w-[1135px] mx-auto">
+          <div class=" bg-[#66C05D] w-[546px] h-[213px]">
+            <div class="relative left-[37px] text-[#FFF] top-[23px]">
+              <p class="text-[18px] font-bold text-start">Получайте бонусы и </p>
+              <p class="text-[18px] font-bold text-start">подарки</p>
+            </div>
+            <div class="relative left-[37px] text-[#FFF] top-[30px]">
+              <p class="text-[#FFF] text-[14px] text-start" >Каждый месяц разыгрываем </p>
+              <p class="text-[#FFF] text-[14px] text-start"> 10 000 рублей для наших клиентов</p>
+            </div>
+            <div class="relative right-[125px] text-[#FFF] top-[50px]" >
+              <input class="h-[35px] w-[225px] border- rounded-3xl text-center" placeholder="Введите e-mail" type="text">
+            </div>
+            <img class=" relative left-[350px] text-[#FFF] bottom-[90px]" src="../../src/assets/envelope.png" alt="">
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 
@@ -380,5 +499,7 @@ export default {
 </template>
 
 <style scoped>
-
+.bg-cover {
+  background-image: url("../../src/assets/Rectangle2.png");
+}
 </style>
