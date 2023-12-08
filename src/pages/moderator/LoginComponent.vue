@@ -38,7 +38,7 @@ export default {
 
         localStorage.setItem('myObject',JSON.stringify(myObject));
 
-        router.push('moderator-home')
+        router.push('moderator.home')
         console.log('Error posting data:', res);
       }).catch(e => {
         console.error('Error posting data:', e);

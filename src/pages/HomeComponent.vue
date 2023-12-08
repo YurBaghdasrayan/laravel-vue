@@ -31,7 +31,7 @@ export default {
       let Token = localStorage.getItem('myObject')
       let token = JSON.parse(Token).token;
 
-      axios.get('http://127.0.0.1:8000/api/all-posts', {
+      axios.get('http://127.0.0.1:8000/api/post', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
@@ -203,7 +203,7 @@ export default {
                   </svg>
                 </td>
               </router-link>
-              <button v-if="roleId === 3" @click="deletePost(asd.id)"
+              <button v-if="roleId === 3 || roleId === 2 " @click="deletePost(asd.id)"
                       style="color: red;border: none; margin-right: 15px">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      class="bi bi-trash" viewBox="0 0 16 16">

@@ -112,7 +112,7 @@ export default {
             <li  class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
               <a
                   class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-                  href="/all-post"
+                  href="/all/post"
                   data-te-nav-link-ref
                   data-te-ripple-init
                   data-te-ripple-color="light"
@@ -130,6 +130,64 @@ export default {
               >
             </li>
           </ul>
+          <ul v-if="roleId == 2"
+              class="mr-auto flex flex-col lg:flex-row"
+              data-te-navbar-nav-ref>
+            <li  class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                  class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="/admin/home"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+              >Home</a
+              >
+            </li>
+
+            <li  class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                  class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="/admin/users"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+              >All Users</a
+              >
+            </li>
+
+            <li  class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                  class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="/admin/create/moderator"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+              >Create Moderator
+              </a>
+            </li>
+
+            <li  class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                  class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="/admin/posts"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+              >My Posts</a
+              >
+            </li>
+            <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                  class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                  href="/admin/create/post"
+                  data-te-nav-link-ref
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+              >Create Posts</a
+              >
+            </li>
+          </ul>
+
 
         </div>
       </div>

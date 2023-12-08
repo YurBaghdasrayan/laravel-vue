@@ -13,6 +13,13 @@ import ModeratorAllPosts from "@/pages/moderator/AllPostsComponent.vue"
 import PostComponent from "@/pages/moderator/PostComponent.vue"
 import ModeratorShowPost from "@/pages/moderator/ShowComponent.vue"
 import ModeratorEditPosts from "@/pages/moderator/ModeratorEditPosts.vue"
+import AdminLogin from "@/pages/admin/LoginComponent.vue"
+import AdminHome from "@/pages/admin/HomeComponent.vue"
+import AdminAllPosts from "@/pages/admin/AllPostsComponent.vue"
+import AdminShowPost from "@/pages/admin/ShowComponent.vue"
+import AdminPostComponent from "@/pages/admin/PostComponent.vue"
+import AdminUsers from "@/pages/admin/UserComponent.vue"
+import CreateModerator from "@/pages/admin/ModeratorComponent.vue"
 
 const routes = [
     {
@@ -40,14 +47,14 @@ const routes = [
     },
 
     {
-        path: '/all-post',
-        name: 'all-post',
+        path: '/all/post',
+        name: 'all.post',
         component: Allpost
     },
 
     {
-        path: '/post-comments/:id',
-        name: 'post-comments',
+        path: '/post/comments/:id',
+        name: 'post.comments',
         component: PostComment
     },
 
@@ -58,7 +65,7 @@ const routes = [
     },
 
     {
-        path: '/show-post/:id',
+        path: '/show/post/:id',
         name: 'show.post',
         component: ShowPost
     },
@@ -66,8 +73,8 @@ const routes = [
 // Moderator
 
     {
-        path: '/moderator-login',
-        name: 'moderator-login',
+        path: '/moderator/login',
+        name: 'moderator.login',
         component: ModeratorLogin
     },
 
@@ -99,6 +106,56 @@ const routes = [
         path: '/moderator/edit/post/:id',
         name: 'moderator.edit.post',
         component: ModeratorEditPosts
+    },
+
+    // Admin
+
+    {
+        path: '/admin/login',
+        name: 'admin.login',
+        component: AdminLogin
+    },
+
+    {
+        path: '/admin/home',
+        name: 'admin.home',
+        component: AdminHome
+    },
+
+    {
+        path: '/admin/posts',
+        name: 'admin.posts',
+        component: AdminAllPosts
+    },
+
+    {
+        path: '/admin/edit/post/:id',
+        name: 'admin.edit.post',
+        component: ModeratorEditPosts
+    },
+
+    {
+        path: '/admin/show/post/:id',
+        name: 'admin.show.post',
+        component: AdminShowPost
+    },
+
+    {
+        path: '/admin/create/post',
+        name: 'moderator.create.post',
+        component: AdminPostComponent
+    },
+
+    {
+        path: '/admin/create/moderator',
+        name: 'admin.create.moderator',
+        component: CreateModerator
+    },
+
+    {
+        path: '/admin/users',
+        name: 'admin.users',
+        component: AdminUsers
     },
 
 

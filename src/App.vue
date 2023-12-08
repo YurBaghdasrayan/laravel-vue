@@ -1,8 +1,8 @@
 <template>
   <div >
-<!--    <TopHeader v-if="this.$route.path !== '/login' && this.$route.path !== '/register' && this.$route.path !== '/moderator-login'">-->
+    <TopHeader v-if="this.$route.path !== '/login' && this.$route.path !== '/register' && this.$route.path !== '/moderator-login'">
 
-<!--    </TopHeader>-->
+    </TopHeader>
 
     <router-view></router-view>
 
@@ -13,12 +13,12 @@
 
 // import HomeComponent from "@/pages/HomeComponent.vue";
 
-// import TopHeader from "@/layouts/TopHeader.vue";
+import TopHeader from "@/layouts/TopHeader.vue";
 
 export default {
   name: 'App',
 
-  // components: {TopHeader},
+  components: {TopHeader},
   // components: {HomeComponent},
 }
 </script>

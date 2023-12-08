@@ -28,13 +28,14 @@ export default {
     let Token = localStorage.getItem('myObject')
     let token = JSON.parse(Token).token;
 
-    axios.get(`http://127.0.0.1:8000/api/get-post/${this.$route.params.id}`, {
+    axios.get(`http://127.0.0.1:8000/api/post/${this.$route.params.id}/edit`, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
       },
     })
         .then((res) => {
+          console.log(res)
           this.form.name = res.data[0].name
           this.form.description = res.data[0].description
           this.form.id = res.data[0].id
@@ -57,7 +58,7 @@ export default {
         let token = JSON.parse(Token).token;
 
         console.log(id)
-        await axios.post(`http://127.0.0.1:8000/api/post/${id}`, {
+        await axios.put(`http://127.0.0.1:8000/api/post/${id}`, {
           name: this.form.name,
           description: this.form.description,
 
@@ -86,8 +87,9 @@ export default {
 </script>
 
 <template>
-  <a href="/home">go to home</a>
+<!--  <pre>{{data}}</pre>-->
 
+  <a href="/home">go to home</a>
 
   <form action="">
     <div class="heading text-center font-bold text-2xl m-5 text-gray-800">Update Post</div>
