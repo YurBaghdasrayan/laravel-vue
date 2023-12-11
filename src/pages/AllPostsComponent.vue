@@ -76,7 +76,6 @@ export default {
   },
 }
 </script>
-
 <template>
   <div class="flex flex-col">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -92,13 +91,13 @@ export default {
               <th scope="col" class="px-6 py-4">Show</th>
             </tr>
             </thead>
-            <tbody v-for="(asd, key) in data" :key="key" :asd="asd">
+            <tbody v-for="(posts, key) in data" :key="key" :posts="posts">
             <tr class="border-b dark:border-neutral-500">
-              <td class="whitespace-nowrap px-6 py-4 font-medium">{{ asd.id }}</td>
-              <td class="whitespace-nowrap px-6 py-4">{{ asd.postcontext.name }}</td>
-              <td class="whitespace-nowrap px-6 py-4">{{ asd.postcontext.description }}</td>
-              <td class="whitespace-nowrap px-6 py-4">{{ asd.user.email }}</td>
-              <router-link v-if="this.roleId === 3" style="margin-right: 15px;color: black;" :to="{name: 'moderator.show.post', params: {id: asd.id}}">
+              <td class="whitespace-nowrap px-6 py-4 font-medium">{{ posts?.id }}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{ posts.postcontent?.name }}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{ posts.postcontent?.description }}</td>
+              <td class="whitespace-nowrap px-6 py-4">{{ posts.user.email }}</td>
+              <router-link v-if="this.roleId === 3" style="margin-right: 15px;color: black;" :to="{name: 'moderator.show.post', params: {id: posts.id}}">
                 comment
                 <td class="whitespace-nowrap px-6 py-4">
                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
@@ -108,7 +107,7 @@ export default {
                   </svg>
                 </td>
               </router-link>
-              <router-link v-if="this.roleId === 2" style="margin-right: 15px;color: black;" :to="{name: 'admin.show.post', params: {id: asd.id}}">
+              <router-link v-if="this.roleId === 2" style="margin-right: 15px;color: black;" :to="{name: 'admin.show.post', params: {id: posts.id}}">
                 comment
                 <td class="whitespace-nowrap px-6 py-4">
                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
@@ -119,7 +118,7 @@ export default {
                 </td>
               </router-link>
 
-              <router-link v-if="this.roleId === 1" style="margin-right: 15px;color: black;" :to="{name: 'show.post', params: {id: asd.id}}">
+              <router-link v-if="this.roleId === 1" style="margin-right: 15px;color: black;" :to="{name: 'show.post', params: {id: posts.id}}">
                 comment
                 <td class="whitespace-nowrap px-6 py-4">
                   <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
@@ -129,7 +128,7 @@ export default {
                   </svg>
                 </td>
               </router-link>
-              <router-link v-if="this.roleId === 1" style="margin-right: 15px;color: black;" :to="{name: 'edit.post', params: {id: asd.id}}">
+              <router-link v-if="this.roleId === 1" style="margin-right: 15px;color: black;" :to="{name: 'edit.post', params: {id: posts.id}}">
                 <button style="border: none;color: blue">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen"
                        viewBox="0 0 16 16">
@@ -140,7 +139,7 @@ export default {
               </router-link>
 
 
-              <router-link v-if="this.roleId === 3" style="margin-right: 15px;color: black;" :to="{name: 'moderator.edit.post', params: {id: asd.id}}">
+              <router-link v-if="this.roleId === 3" style="margin-right: 15px;color: black;" :to="{name: 'moderator.edit.post', params: {id: posts.id}}">
                 <button style="border: none;color: blue">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen"
                        viewBox="0 0 16 16">
@@ -149,7 +148,7 @@ export default {
                   </svg>
                 </button>
               </router-link>
-              <router-link v-if="this.roleId === 2" style="margin-right: 15px;color: black;" :to="{name: 'admin.edit.post', params: {id: asd.id}}">
+              <router-link v-if="this.roleId === 2" style="margin-right: 15px;color: black;" :to="{name: 'admin.edit.post', params: {id: posts.id}}">
                 <button style="border: none;color: blue">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen"
                        viewBox="0 0 16 16">
@@ -159,7 +158,7 @@ export default {
                 </button>
               </router-link>
 
-              <button @click="deletePost(asd.id)" style="color: red;border: none; margin-right: 15px">
+              <button @click="deletePost(posts.id)" style="color: red;border: none; margin-right: 15px">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      class="bi bi-trash" viewBox="0 0 16 16">
                   <path

@@ -55,6 +55,7 @@ export default {
       let Token = localStorage.getItem('myObject')
       let token = JSON.parse(Token).token;
 
+
       axios.post('http://127.0.0.1:8000/api/post', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
@@ -62,6 +63,8 @@ export default {
         },
       })
           .then(response => {
+
+
             if (this.roleId === 3) {
               router.push({name: 'moderator.home'})
             }

@@ -55,7 +55,7 @@ export default {
             console.log(data)
             this.data = data
             this.user = data.user
-            this.postcontent = data.postcontext
+            this.postcontent = data.postcontent
             this.comments = data.comments
           })
           .catch(error => {
