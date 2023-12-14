@@ -57,8 +57,42 @@ export default {
           .catch(error => {
             console.error('Error fetching data:', error);
           });
+    },
+    mounted() {
+    },
+    methods: {
+      async submitPayment() {
+        const stripe = Stripe('YOUR_STRIPE_PUBLIC_KEY');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+
+        // Create a token with the card information
+        const { token, error } = await stripe.createToken(cardElement);
+
+        if (error) {
+          // Display errors to the user
+          console.error(error.message);
+        } else {
+          // Send the token to your server
+          this.sendTokenToServer(token.id);
+        }
+      },
+      sendTokenToServer(token) {
+        // Make an HTTP request to your server, passing the token
+        // Example using Axios
+        axios.post('/your-server-endpoint', { token })
+            .then(response => {
+              // Handle the server response as needed
+            })
+            .catch(error => {
+              // Handle errors
+              console.error(error);
+            });
+      }
     }
-  },
+  };
+
+},
 }
 </script>
 
@@ -106,6 +140,36 @@ export default {
       </div>
     </div>
   </div>
+
+  <div>
+    <div class="bg-white my-4 shadow p-8 rounded-lg">
+      <div class="flex items-center mb-4">
+        <div class="border-2 border-blue px-3 py-2 rounded-full font-bold text-blue mr-2">1</div>
+        <h2 class="text-lg">Your Payment Information</h2>
+      </div>
+      <form action="">
+        <div class="w-full">
+          <label for="payment" class="block text-sm mb-2">Credit Card</label>
+          <div class="flex">
+            <input name="name" type="text" id="payment"
+                   class="w-5/6 flex-1 text-sm bg-grey-light text-grey-darkest rounded-l p-3 focus:outline-none"
+                   placeholder="name">
+            <input type="text" id="payment"
+                   class="w-5/6 flex-1 text-sm bg-grey-light text-grey-darkest rounded-l p-3 focus:outline-none"
+                   placeholder="Card Number">
+            <input type="text" id="payment"
+                   class="w-1/6 inline-block text-sm bg-grey-light text-grey-darkest p-3 focus:outline-none"
+                   placeholder="MM / YY">
+            <input type="text" id="payment"
+                   class="w-1/6 inline-block text-sm bg-grey-light text-grey-darkest rounded-r p-3 focus:outline-none"
+                   placeholder="CVC">
+          </div>
+        </div>
+        <button type="button" @click="sendCard()"></button>
+      </form>
+    </div>
+  </div>
+
 </template>
 
 <style scoped>
