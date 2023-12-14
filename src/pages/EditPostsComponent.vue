@@ -8,8 +8,8 @@ import Swal from 'sweetalert2'
 export default {
   data() {
     return {
-      roleId:null,
-      Token:null,
+      roleId: null,
+      Token: null,
       err: {},
       data: [],
       form: {
@@ -75,7 +75,7 @@ export default {
             showConfirmButton: false,
             timer: 1500
           });
-            })
+        })
       } catch (error) {
         console.error('Error posting data:', error);
       }
@@ -87,23 +87,27 @@ export default {
 </script>
 
 <template>
-<!--  <pre>{{data}}</pre>-->
-
   <a href="/home">go to home</a>
 
   <form action="">
     <div class="heading text-center font-bold text-2xl m-5 text-gray-800">Update Post</div>
     <div class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl">
-      <input name="name" v-model="form.name"  class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none" spellcheck="false" placeholder="Title" type="text">
+      <input name="name" v-model="form.name" class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none"
+             spellcheck="false" placeholder="Title" type="text">
       <p style="color: red" v-if="err.name">{{ err.name }}</p>
 
-      <textarea v-model="form.description" name="description" class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false" placeholder="Describe everything about this post here"></textarea>
+      <textarea v-model="form.description" name="description"
+                class="description bg-gray-100 sec p-3 h-60 border border-gray-300 outline-none" spellcheck="false"
+                placeholder="Describe everything about this post here"></textarea>
       <p style="color: red" v-if="err.description">{{ err.description }}</p>
 
       <label for="image">Image:</label>
       <input name="image" @change="handleFileChange" type="file" id="image"/>
       <div style="margin-top: 10px" class="buttons flex">
-        <button @click="updateForm(form.id)" type="button" class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">Post</button>
+        <button @click="updateForm(form.id)" type="button"
+                class="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">
+          Post
+        </button>
       </div>
     </div>
   </form>

@@ -134,7 +134,7 @@ export default {
                 <th scope="col" class="px-6 py-4">Block User</th>
               </tr>
               </thead>
-              <tbody v-for="(user, key) in data" :key="key" :asd="asd">
+              <tbody v-for="(user, key) in data" :key="key">
               <tr class="border-b dark:border-neutral-500">
                 <td class="whitespace-nowrap px-6 py-4 font-medium">{{ user.id }}</td>
                 <td class="whitespace-nowrap px-6 py-4">{{ user.name }}</td>
@@ -155,7 +155,6 @@ export default {
         </div>
       </div>
     </div>
-
   </div>
 </template>
 

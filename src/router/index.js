@@ -20,6 +20,9 @@ import AdminShowPost from "@/pages/admin/ShowComponent.vue"
 import AdminPostComponent from "@/pages/admin/PostComponent.vue"
 import AdminUsers from "@/pages/admin/UserComponent.vue"
 import CreateModerator from "@/pages/admin/ModeratorComponent.vue"
+import Plan from "@/pages/PlanComponent.vue"
+import Subscription from "@/pages/SubscriptionComponent.vue";
+import SubscriptionShow from "@/pages/SubscriptionShow.vue";
 
 const routes = [
     {
@@ -156,6 +159,24 @@ const routes = [
         path: '/admin/users',
         name: 'admin.users',
         component: AdminUsers
+    },
+
+    {
+        path: '/plan',
+        name: 'plan',
+        component: Plan
+    },
+
+    {
+        path: '/subscriptions',
+        name: 'subscriptions',
+        component: Subscription
+    },
+
+    {
+        path: '/subscriptionss',
+        name: 'subscription.show',
+        component: SubscriptionShow
     },
 
 
